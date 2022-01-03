@@ -1,0 +1,43 @@
+Table Departments: 
+* ID - surrogate key
+* Name - name of the department
+* City - city where department located at
+* Building - name of the building the department located at
+* BuildingFloor - floor of the building where department located
+
+Table Employees:
+* ID - surrogate key
+* Name - name of the employee
+* DateOfBirth - date of birth
+* Sex - sex of the employee ('m' or 'f')
+* StartDate - the date of employment
+* DepartmentID - ID of the department the employee belongs to
+* LeaderID - ID of the manager the employee reports to (self-referencing foreign key)
+* Position - name of the position
+* Education - education level of the employee
+* CardNumber - number of bank card
+
+
+Table Salaries: 
+* ID - surrogate key
+* Amount - paid amount
+* EmployeeID - ID of the employee
+* PaymentDate - date of the payment
+
+
+Table Bonuses: 
+* ID - surrogate key
+* Amount - paid amount
+* EmployeeID - ID of the employee 
+* PaymentDate - date of the payment
+* Category - category of the bonus
+
+
+Table Penalties: 
+* ID - surrogate key
+* Amount - amount of penalty
+* EmployeeID - ID of the employee
+* PenaltyDate - penalty date
+* PaymentDate - date of the payment
+* Category - category of the penalty
+* SeverityCategory - severity category of the penalty

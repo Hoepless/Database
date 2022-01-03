@@ -1,0 +1,38 @@
+Database contains information about restaurant's menu. 
+
+Table Dishes: 
+* ID - surrogate key 
+* Name - name of the dish 
+* SectionID - ID of menu section 
+* Weight - weight of the dish 
+
+Table Sections (sections of menu): 
+* ID - surrogate key 
+* Name - section's name (example: First Dishes or Deserts) 
+
+Table Tags: 
+* ID - surrogate key  
+* Name - tag’s text (example: Spicy or Vegetarian) 
+
+Table Ingredients: 
+* ID - surrogate key 
+* Name - products name that is used in the making of the dish 
+
+Table DishesTags (many-to-many relationship between Dishes and Tags) 
+* ID -  surrogate key 
+* DishID - ID of the dish
+* TagID - ID of the tag
+
+Table DishesIngredients (many-to-many relationship between Dishes and Ingredients) 
+* ID - surrogate key 
+* DishID - ID of the dish 
+* IngredientID - ID of the ingredient 
+* Weight - weight (amount) of the ingredient in the dish 
+
+Table Prices (food prices): 
+* ID - surrogate key 
+* DishID - ID of the dish 
+* DateFrom - the date on which the price is active
+* DateTo - the date until which the price is active. If DateTo IS NULL, then the price is active without a date limit.
+* Price - price for dishes in a given period
+If more than one price is active for the same date, then the one with the DateFrom maximum is considered active.
